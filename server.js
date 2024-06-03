@@ -4,11 +4,12 @@ const mongoose = require("mongoose");
 require("dotenv").config();
 const app = express();
 mongoose.connect(process.env.MONGO_URI, {useNewUrlParser: true}).then(() => {
-    console.log('successfully connected to database')
+  const port = process.env.PORT || 3000;
+  app.listen(port, "0.0.0.0", () => {
+      console.log("Server is running on port: " + port);
+  })
 })
 console.log(process.env);
-
-const port = process.env.PORT || 3000;
 
 app.get("/", (req, res) => {
   res.send("This works")
@@ -49,9 +50,4 @@ app.post('/new', (req, res) => {
     if (err) console.log(err);
     res.send(`Successfully added`)
   })
-})
-
-// Start the server
-app.listen(port, () => {
-  console.log(`Server is running on http://localhost:${port}`);
 })
