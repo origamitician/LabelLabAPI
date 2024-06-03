@@ -1,12 +1,11 @@
 {
-  "name": "templatemo_581_kind_heart_charity",
+  "name": "labellabapi",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "build": "npm run build --omit=dev"
+    "build": "npm run build"
   },
   "keywords": [],
   "author": "",
@@ -16,5 +15,15 @@
     "express": "^4.19.2",
     "mongoose": "^8.4.1",
     "path": "^0.12.7"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/origamitician/LabelLabAPI.git"
+  },
+  "bugs": {
+    "url": "https://github.com/origamitician/LabelLabAPI/issues"
+  },
+  "homepage": "https://github.com/origamitician/LabelLabAPI#readme",
+  "description": ""
 }
